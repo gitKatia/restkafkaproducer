@@ -1,0 +1,16 @@
+server:
+  port: 9002
+  servlet:
+    context-path: /rest-kafka-producer
+spring:
+  kafka:
+    producer:
+      client-id: kafka-rest-producer
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+rest-kafka-producer:
+      example-topic: example_topic
+      example-topic-replicas: 1
+      example-topic-partitions: 1
